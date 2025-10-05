@@ -1,0 +1,339 @@
+/* Centralizar texto do botão SALVAR */
+#saveBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+/* Ajuste para textos longos no histórico */
+.history-entry p, .history-entry h4, .history-entry h5 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    max-width: 100%;
+}
+
+.history-entry {
+    max-width: 100%;
+    overflow-x: auto;
+}
+/* Smaller text for rows inside history modal (less prominent than horário) */
+.history-row {
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+/* Green background for gains line in history modal */
+.history-gains {
+    background-color: #d4edda; /* light green */
+    border: 1px solid #c3e6cb;
+    color: #155724; /* dark green text */
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+/* Estilos personalizados para corresponder à sua captura */
+.table-header-blue {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.table-header-yellow {
+    background-color: #ffc107;
+}
+
+.highlight-green {
+    background-color: #28a745;
+    color: white;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* text-size-adjust removed — kept compatibility to valid properties only */
+
+/* Estilos para inputs na tabela */
+
+/* Campo CLI. AFET. ainda maior */
+.cli-afet-input {
+    /* Use full width of the cell but limit max width to avoid overflow */
+    width: 100%;
+    max-width: 260px;
+    padding: 6px 12px;
+    font-size: 1.08rem;
+    box-sizing: border-box;
+}
+
+/* Aumentar campo CLI para ficar melhor ajustado (mais largo) */
+.cli-afet-input {
+    width: 100%;
+    max-width: 360px; /* aumenta o máximo para telas maiores */
+    padding: 8px 12px;
+    font-size: 1.1rem;
+}
+
+/* Campos CLI. AFET. MANOBRA e TMA AFET. MANOBRA ainda menores */
+.cli-afet-manobra-input,
+.tma-afet-manobra-input {
+    width: 60px; /* fixed small input to avoid stretching columns */
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+}
+
+/* Remove as setas dos campos number (Chrome, Edge, Opera) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Remove as setas dos campos number (Firefox) */
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.form-control-sm {
+    padding: 6px 8px;
+    font-size: 0.925rem;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+td {
+    padding: 6px 8px; /* restored comfortable cell padding for better button spacing */
+}
+
+/* Estilo para o botão Remover, Duplicar e X */
+.btn-sm {
+    padding: 4px 8px; /* slightly larger tap targets */
+    font-size: 0.8rem;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* Estilo para legendas e rodapé */
+.mt-2 p {
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.card-body .btn {
+    margin-top: 5px;
+}
+
+/* Banner do relatório que aparece abaixo dos botões */
+.report-banner {
+    background-color: #d9eefb; /* azul claro */
+    color: #0b3d91; /* azul escuro para contraste */
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 6px;
+    font-weight: 600;
+}
+.report-banner.d-none {
+    display: none !important;
+}
+.report-banner.d-block {
+    display: block !important;
+}
+
+/* Estilo do botão Gerar Relatório centralizado (azul claro) */
+.btn-generate-report {
+    background-color: #cfe9ff; /* azul claro */
+    color: #0b3d91; /* texto azul escuro para contraste */
+    border: 1px solid #9fd1ff;
+    padding: 8px 18px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+.btn-generate-report:hover {
+    background-color: #b7e0ff;
+}
+
+/* Subtotal boxes under each table */
+.subtotal-boxes {
+    display: flex;
+    gap: 12px;
+}
+.subtotal-card {
+    background: #f7f9fb;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+}
+.subtotal-label {
+    font-size: 0.85rem;
+    color: #333;
+}
+.subtotal-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0b3d91;
+    margin-top: 6px;
+}
+
+/* Ajuste para layout lado a lado e botão X */
+.row > .col-md-6 {
+    /* Aumenta o espaçamento lateral entre as colunas para evitar colagem das tabelas */
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+
+/* Evita overflow horizontal inesperado quando inputs ou botões ficarem maiores */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Garante que a tabela ocupe toda a largura disponível da coluna e que seus conteúdos possam quebrar linhas */
+.table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.table td input, .table th {
+    word-break: break-word;
+}
+
+table {
+    margin-bottom: 0;
+}
+
+tbody tr td:nth-child(5) {
+    border-right: none;
+}
+
+td[style*="rowSpan"] {
+    vertical-align: middle;
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+/* Estilo para o campo de incidência */
+#incidence {
+    max-width: 150px;
+}
+
+/* Estilo para o menu de contexto */
+.context-menu {
+    display: block;
+    cursor: default;
+}
+
+.context-menu div {
+    cursor: pointer;
+}
+
+.context-menu div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Nova seção: Fundo com a imagem */
+body {
+    background-image: url('background.jpg'); /* Nome do arquivo da imagem */
+    background-size: cover; /* Cobrir toda a tela */
+    background-position: center; /* Centralizar a imagem */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-attachment: fixed; /* Fixa o fundo ao rolar a página */
+}    
+
+/* Overlay escuro para legibilidade do conteúdo */
+.container {
+    max-width: 1200px; /* Limita largura em telas grandes para melhor leitura */
+    margin: 0 auto; /* centraliza */
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com pequena transparência */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 18px; /* Espaçamento interno padrão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra suave */
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+    .row > .col-md-6 { padding: 0 18px; }
+}
+
+@media (max-width: 992px) {
+    /* Em laptops menores reduzimos os gutters e os inputs ficam menores */
+    .row > .col-md-6 { padding: 0 12px; }
+    .cli-afet-input { max-width: 200px; }
+    .report-banner { font-size: 0.95rem; }
+}
+
+@media (max-width: 768px) {
+    /* Em tablets e celulares empilha as colunas e amplia inputs para 100% */
+    .row > .col-md-6 { width: 100%; padding: 0; }
+    .col-md-6 { margin-bottom: 12px; }
+    .table { font-size: 0.95rem; }
+    .cli-afet-input, .cli-afet-manobra-input, .tma-afet-manobra-input {
+        max-width: 100%;
+        width: 100%;
+    }
+    .btn-sm { margin-right: 4px; }
+}
+
+@media (max-width: 420px) {
+    /* Ajustes finos para telas muito estreitas */
+    .report-banner { font-size: 0.9rem; padding: 8px 10px; }
+    .table td input { font-size: 0.9rem; }
+    #saveBtn { font-size: 0.95rem; padding: 8px; }
+}
+
+/* Quando quisermos posicionar subtotais acima do cabeçalho */
+.subtotal-boxes.before-header {
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+/* Reduce spacing between gains panel and report banner */
+.report-gains {
+    margin-bottom: 6px;
+}
+
+/* Center text inside report banner */
+#reportBanner {
+    text-align: center;
+}
+
+/* Ocultar visualmente (mas manter no DOM) as colunas "CLI. AFET. MANOBRA" e "TMA AFET. MANOBRA"
+   Mantemos inputs para cálculo, mas escondemos a coluna 3 e 4 para limpar a UI. */
+/* Esconde o cabeçalho nas colunas 3 e 4 */
+table.table thead th:nth-child(3),
+table.table thead th:nth-child(4) {
+    display: none;
+}
+
+/* Esconde as células dessas colunas no corpo da tabela */
+table.table tbody td:nth-child(3),
+table.table tbody td:nth-child(4) {
+    display: none;
+    width: 0; /* evita que ocupem espaço */
+    padding: 0; /* remove padding para alinhar melhor */
+}
+
+/* Esconde os inputs dentro das células (caso existam) */
+table.table tbody td:nth-child(3) input,
+table.table tbody td:nth-child(4) input {
+    display: none !important;
+}
